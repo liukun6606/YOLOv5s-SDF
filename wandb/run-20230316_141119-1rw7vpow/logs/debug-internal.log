@@ -1,0 +1,64 @@
+2023-03-16 14:11:19,944 INFO    StreamThr :10636 [internal.py:wandb_internal():90] W&B internal server running at pid: 10636, started at: 2023-03-16 14:11:19.943456
+2023-03-16 14:11:19,945 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: status
+2023-03-16 14:11:19,947 DEBUG   SenderThread:10636 [sender.py:send_request():316] send_request: status
+2023-03-16 14:11:19,948 DEBUG   SenderThread:10636 [sender.py:send():302] send: header
+2023-03-16 14:11:19,948 INFO    WriterThread:10636 [datastore.py:open_for_write():75] open: D:\d2l-zh\pytorch\object_detection\yolov5-7.0-SeaDronesSee\wandb\run-20230316_141119-1rw7vpow\run-1rw7vpow.wandb
+2023-03-16 14:11:19,949 DEBUG   SenderThread:10636 [sender.py:send():302] send: run
+2023-03-16 14:11:19,957 INFO    SenderThread:10636 [sender.py:_maybe_setup_resume():578] checking resume status for None/train/1rw7vpow
+2023-03-16 14:11:23,482 ERROR   SenderThread:10636 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\connectionpool.py", line 692, in urlopen
+    conn = self._get_conn(timeout=pool_timeout)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\connectionpool.py", line 281, in _get_conn
+    return conn or self._new_conn()
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\connectionpool.py", line 1011, in _new_conn
+    raise SSLError(
+urllib3.exceptions.SSLError: Can't connect to HTTPS URL because the SSL module is not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError("Can't connect to HTTPS URL because the SSL module is not available."))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\sdk\lib\retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\sdk\internal\internal_api.py", line 204, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\transport\requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError("Can't connect to HTTPS URL because the SSL module is not available."))
+2023-03-16 14:11:49,956 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:11:55,080 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:00,199 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:05,313 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:10,428 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:15,546 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:20,664 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:25,779 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:30,901 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:36,016 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:41,130 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit
+2023-03-16 14:12:46,241 DEBUG   HandlerThread:10636 [handler.py:handle_request():141] handle_request: poll_exit

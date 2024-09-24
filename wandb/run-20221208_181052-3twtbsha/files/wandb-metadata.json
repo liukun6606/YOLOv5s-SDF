@@ -1,0 +1,16 @@
+{
+    "os": "Windows-10-10.0.19042-SP0",
+    "python": "3.9.12",
+    "heartbeatAt": "2022-12-08T10:10:54.433336",
+    "startedAt": "2022-12-08T10:10:52.527375",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\admin\\Desktop\\pytorch\\object_detection\\yolov5-7.0\\train.py",
+    "codePath": "train.py",
+    "host": "DESKTOP-3G7TH5K",
+    "username": "admin",
+    "executable": "D:\\deeplearning\\miniconda\\envs\\d2l\\python.exe"
+}

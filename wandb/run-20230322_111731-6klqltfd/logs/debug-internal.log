@@ -1,0 +1,62 @@
+2023-03-22 11:17:31,509 INFO    StreamThr :5992 [internal.py:wandb_internal():87] W&B internal server running at pid: 5992, started at: 2023-03-22 11:17:31.509350
+2023-03-22 11:17:31,510 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: status
+2023-03-22 11:17:31,511 INFO    WriterThread:5992 [datastore.py:open_for_write():85] open: D:\d2l-zh\pytorch\object_detection\yolov5-7.0-SeaDronesSee\wandb\run-20230322_111731-6klqltfd\run-6klqltfd.wandb
+2023-03-22 11:17:31,513 DEBUG   SenderThread:5992 [sender.py:send():336] send: header
+2023-03-22 11:17:31,513 DEBUG   SenderThread:5992 [sender.py:send():336] send: run
+2023-03-22 11:17:31,519 DEBUG   SenderThread:5992 [git.py:repo():40] git repository is invalid
+2023-03-22 11:17:34,920 INFO    SenderThread:5992 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\connectionpool.py", line 692, in urlopen
+    conn = self._get_conn(timeout=pool_timeout)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\connectionpool.py", line 281, in _get_conn
+    return conn or self._new_conn()
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\connectionpool.py", line 1011, in _new_conn
+    raise SSLError(
+urllib3.exceptions.SSLError: Can't connect to HTTPS URL because the SSL module is not available.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError("Can't connect to HTTPS URL because the SSL module is not available."))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\sdk\internal\internal_api.py", line 243, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\transport\requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Anaconda3\envs\d2l\lib\site-packages\requests\adapters.py", line 563, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by SSLError("Can't connect to HTTPS URL because the SSL module is not available."))
+2023-03-22 11:17:36,544 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-22 11:17:41,606 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-22 11:17:46,641 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-22 11:17:51,686 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-22 11:17:56,720 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-22 11:18:01,770 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-22 11:18:06,824 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-22 11:18:11,858 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-22 11:18:13,880 DEBUG   HandlerThread:5992 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-22 11:18:13,880 INFO    HandlerThread:5992 [handler.py:finish():842] shutting down handler
+2023-03-22 11:18:14,854 INFO    WriterThread:5992 [datastore.py:close():298] close: D:\d2l-zh\pytorch\object_detection\yolov5-7.0-SeaDronesSee\wandb\run-20230322_111731-6klqltfd\run-6klqltfd.wandb

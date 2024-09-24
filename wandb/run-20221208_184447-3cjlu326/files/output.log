@@ -1,0 +1,75 @@
+Dataset not found , missing paths ['C:\\Users\\admin\\Desktop\\pytorch\\object_detection\\datasets\\coco128\\images\\train2017']
+Downloading https://ultralytics.com/assets/coco128.zip to coco128.zip...
+100%|██████████| 6.66M/6.66M [00:02<00:00, 3.05MB/s]
+Dataset download success  (5.8s), saved to [1mC:\Users\admin\Desktop\pytorch\object_detection\datasets
+Downloading https://ultralytics.com/assets/Arial.ttf to C:\Users\admin\AppData\Roaming\Ultralytics\Arial.ttf...
+100%|██████████| 755k/755k [00:01<00:00, 469kB/s]
+                 from  n    params  module                                  arguments
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]
+ 24      [17, 20, 23]  1    229245  models.yolo.Detect                      [80, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model summary: 214 layers, 7235389 parameters, 7235389 gradients, 16.6 GFLOPs
+Transferred 349/349 items from yolov5s.pt
+[34m[1moptimizer:[39m[22m SGD(lr=0.01) with parameter groups 57 weight(decay=0.0), 60 weight(decay=0.0005), 60 bias
+
+[34m[1mtrain: [39m[22mScanning C:\Users\admin\Desktop\pytorch\object_detection\datasets\coco128\labels\train2017... 126 images, 2 backgrounds, 0 corrupt: 100%|██████████| 128/128 00:19
+[34m[1mtrain: [39m[22mNew cache created: C:\Users\admin\Desktop\pytorch\object_detection\datasets\coco128\labels\train2017.cache
+[34m[1mval: [39m[22mScanning C:\Users\admin\Desktop\pytorch\object_detection\datasets\coco128\labels\train2017.cache... 126 images, 2 backgrounds, 0 corrupt: 100%|██████████| 128/128 00:00
+[34m[1mAutoAnchor: [39m[22m4.27 anchors/target, 0.994 Best Possible Recall (BPR). Current anchors are a good fit to dataset
+Plotting labels to runs\train\exp3\labels.jpg...
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1mruns\train\exp3
+Starting training for 100 epochs...
+      Epoch    GPU_mem   box_loss   obj_loss   cls_loss  Instances       Size
+  0%|          | 0/8 00:09
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\train.py", line 634, in <module>
+    main(opt)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\train.py", line 528, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\train.py", line 309, in train
+    pred = model(imgs)  # forward
+  File "D:\deeplearning\miniconda\envs\d2l\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\models\yolo.py", line 209, in forward
+    return self._forward_once(x, profile, visualize)  # single-scale inference, train
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\models\yolo.py", line 121, in _forward_once
+    x = m(x)  # run
+  File "D:\deeplearning\miniconda\envs\d2l\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\models\common.py", line 168, in forward
+    return self.cv3(torch.cat((self.m(self.cv1(x)), self.cv2(x)), 1))
+  File "D:\deeplearning\miniconda\envs\d2l\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\models\common.py", line 57, in forward
+    return self.act(self.bn(self.conv(x)))
+  File "D:\deeplearning\miniconda\envs\d2l\lib\site-packages\torch\nn\modules\module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\site-packages\torch\nn\modules\conv.py", line 447, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\site-packages\torch\nn\modules\conv.py", line 443, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: [enforce fail at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\c10\core\impl\alloc_cpu.cpp:81] data. DefaultCPUAllocator: not enough memory: you tried to allocate 52428800 bytes.

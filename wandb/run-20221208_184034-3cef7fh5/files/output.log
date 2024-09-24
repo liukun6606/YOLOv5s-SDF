@@ -1,0 +1,54 @@
+Dataset not found , missing paths ['C:\\Users\\admin\\Desktop\\pytorch\\object_detection\\datasets\\coco128\\images\\train2017']
+Downloading https://ultralytics.com/assets/coco128.zip to coco128.zip...
+Traceback (most recent call last):
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\train.py", line 634, in <module>
+    main(opt)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\train.py", line 528, in main
+    train(opt.hyp, opt, device, callbacks)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\train.py", line 96, in train
+    loggers = Loggers(save_dir, weights, opt, hyp, LOGGER)  # loggers instance
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\utils\loggers\__init__.py", line 111, in __init__
+    self.wandb = WandbLogger(self.opt, run_id)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\utils\loggers\wandb\wandb_utils.py", line 192, in __init__
+    self.data_dict = check_wandb_dataset(opt.data)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\utils\loggers\wandb\wandb_utils.py", line 59, in check_wandb_dataset
+    return check_dataset(data_file)
+  File "C:\Users\admin\Desktop\pytorch\object_detection\yolov5-7.0\utils\general.py", line 547, in check_dataset
+    torch.hub.download_url_to_file(s, f)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\site-packages\torch\hub.py", line 457, in download_url_to_file
+    u = urlopen(req)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 555, in error
+    result = self._call_chain(*args)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 747, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "D:\deeplearning\miniconda\envs\d2l\lib\urllib\request.py", line 1350, in do_open
+    r = h.getresponse()
+  File "D:\deeplearning\miniconda\envs\d2l\lib\http\client.py", line 1377, in getresponse
+    response.begin()
+  File "D:\deeplearning\miniconda\envs\d2l\lib\http\client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "D:\deeplearning\miniconda\envs\d2l\lib\http\client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "D:\deeplearning\miniconda\envs\d2l\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "D:\deeplearning\miniconda\envs\d2l\lib\ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
